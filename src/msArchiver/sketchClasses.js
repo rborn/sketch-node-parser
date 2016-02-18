@@ -193,6 +193,10 @@ sketchClasses.MSImmutablePage = function(obj, archive) {
   this.sharedObjectID = obj.sharedObjectID;
 };
 
+sketchClasses.MSImmutableArtboardGroup = function(obj, archive) {
+  this.objects = obj.objects;
+};
+
 sketchClasses.MSImmutableDocumentData = function(obj, archive) {
   this.assets = archive.deserializeByRef(obj.assets);
   this.currentPageIndex = obj.currentPageIndex;
