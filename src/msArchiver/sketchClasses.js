@@ -35,6 +35,9 @@ sketchClasses.MSImmutableArray = function(obj, archive) {
 sketchClasses.NSDictionary = function(obj, archive) {
 
 };
+sketchClasses.NSMutableDictionary = function(obj, archive) {
+
+};
 sketchClasses.MSImmutableImageCollection = function(obj, archive) {
   this.images = obj.images;
 };
@@ -51,6 +54,15 @@ sketchClasses.MSImmutableSharedLayerContainer = function(obj, archive) {
   this.objects = obj.objects;
 };
 sketchClasses.MSImmutableSharedLayerTextStyleContainer = function(obj, archive) {
+  this.objects = obj.objects;
+};
+sketchClasses.MSImmutableSharedTextStyleContainer = function(obj, archive) {
+  this.objects = obj.objects;
+};
+sketchClasses.MSImmutableSharedStyleContainer = function(obj, archive) {
+  this.objects = obj.objects;
+};
+sketchClasses.MSImmutableSymbolContainer = function(obj, archive) {
   this.objects = obj.objects;
 };
 sketchClasses.MSImmutableExportOptions = function(obj, archive) {
