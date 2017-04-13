@@ -16,7 +16,12 @@ MSUnarchiver.prototype.getByRef = function(ref) {
 MSUnarchiver.prototype.deserialize = function(obj) {
   if(obj.$class) {
     var classname = this.getByRef(obj.$class).$classname;
-    return new sketchClasses[classname](obj, this);
+    if (classname in sketchClasses) {
+      return new sketchClasses[classname](obj, this);
+    } else {
+      console.error('Please add support for unrecognized sketch object type: ' + classname);
+      return null;
+    }
   } else if(obj === '$null') {
     return null;
   } else if(_.isString(obj)) {
